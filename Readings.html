@@ -1,0 +1,112 @@
+<!-- 
+ I haven't had time to translate the words, but I can write them down.
+
+        Kitap = book
+        okunanlar = Readings
+        merhaba = hello 
+        sil= delete
+    
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            background-color: rgb(243, 243, 243);
+        }
+
+        #kitap-okundu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .kitap {
+            margin: 50px 7%;
+
+            i {
+                font-size: 60px;
+                margin-bottom: 10px;
+            }
+
+            button {
+
+                height: 20px;
+                margin-top: 10px;
+            }
+        }
+
+        .merhaba {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            margin-left: 10%;
+            border-radius: 20px;
+            width: 50%;
+            height: 35px;
+            color: #c7c7c7;
+            background-color: blue;
+            box-shadow: 0px 1px 10px 2px #acacac;
+
+            H4 {
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+
+        .alert {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 10px;
+            flex-direction: column;
+        }
+
+        .inAlert {
+            padding-bottom: 35px;
+            margin: 2px 0px;
+        }
+
+        .sil {
+            background-color: #ff0000;
+            color: #fff;
+            border: 1px solid #be0000;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 450px) {
+            .merhaba {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert">
+
+    </div>
+    <div class="merhaba">
+        <h4>Books you read</H4>
+    </div>
+    <ul id="kitap-okundu">
+
+    </ul>
+    <script src="app.js"></script>
+</body>
+
+</html>

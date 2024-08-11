@@ -1,0 +1,186 @@
+<!-- 
+ I haven't had time to translate the words, but I can write them down.
+
+        Kitap = book
+        okunanlar = Readings
+        okudum = I read
+        ekleme = adding
+        ekle = add
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>books to read</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            background-color: rgb(243, 243, 243);
+            margin: 0;
+            padding: 0;
+        }
+
+        #kitap {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .kitap {
+            margin: 50px 7%;
+
+            i {
+                font-size: 60px;
+                margin-bottom: 10px;
+            }
+
+            button {
+
+                height: 20px;
+                margin-top: 10px;
+            }
+        }
+
+        .input {
+            margin-top: 15px;
+
+            button {
+                color: #c9c9c9;
+                background-color: #696969;
+                box-shadow: 0px 1px 5px black;
+                border: 1px solid #404040;
+            }
+        }
+
+        input {
+            display: flex;
+            text-align: center;
+            width: 40%;
+            height: 30px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            padding: 0;
+            text-shadow: 0px 0px 1px #5e5e5e;
+            background-color: #cccccc;
+            color: #1f1f1f;
+            box-shadow: 0px 1px 4px #1a1a1a;
+            border: 2px solid #969696;
+        }
+
+        input:focus {
+            border: 4px solid #ffd900;
+        }
+
+        .add {
+            width: 70px;
+            height: 33px;
+            border-radius: 10px;
+        }
+
+        .okunanlar {
+            /* display: flex; */
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 5%;
+            text-align: center;
+            z-index: 1;
+            position: absolute;
+            margin-top: -55px;
+
+            i {
+                margin: 0px;
+                padding: 0;
+                color: #1e00ff
+            }
+
+            h4 {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .okunanlar-text {
+            font-size: 90%;
+            color: blue;
+        }
+
+        .alert {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            filter: drop-shadow(0px 1px 7px black);
+        }
+
+        .inAlert {
+            padding-bottom: 35px;
+            margin: 15px 0px;
+        }
+
+        .okudum {
+            border-radius: 8px;
+            border: 1px solid #005207;
+            background-color: #005207;
+            color: #fff;
+        }
+
+
+
+        /* #kitap-okundu {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        } */
+        @media screen and (max-width: 450px) {
+            .okunanlar {
+                i {
+                    font-size: 10px;
+                }
+
+                h4 {
+                    font-size: 10px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert">
+    </div>
+    <center>
+        <div class="input">
+            <input class="ekleme" type="text" placeholder="add book" maxlength="25">
+            <button onclick="addtodo()" class="add">add</button>
+        </div>
+    </center>
+    <a href="Readings.html" class="okunanlar">
+        <i class="fa-solid fa-book-bookmark"></i>
+        <h4 class="okunanlar-text">Readings</h4>
+    </a>
+
+
+    <ul id="kitap">
+
+    </ul>
+    <!-- <ul id="kitap-okundu">
+
+    </ul> -->
+    <script src="app.js"></script>
+</body>
+
+</html>
